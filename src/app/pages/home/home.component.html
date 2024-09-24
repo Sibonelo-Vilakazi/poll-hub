@@ -1,0 +1,9 @@
+<div class="home-container w-full flex flex-col gap-y-4 p-8 dark:bg-custom-black min-h-screen min-w-screen">
+    <div class="view-polls w-full flex items-start flex-wrap gap-4">
+        @for (item of cards; track $index) {
+            <div class="card-sec self-stretch">
+                <app-poll-card (vote)="handleVote($event)" [config]="item"></app-poll-card>
+            </div>
+        }
+    </div>
+</div>
